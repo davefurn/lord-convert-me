@@ -8,13 +8,13 @@ import 'package:redux_beginng/screens/home-screen.dart';
 import 'redux/reducers.dart';
 
 void main() {
-  Store<AppState> _store =
-      Store<AppState>(reducers, initialState: AppState.initial(), middleware: [appStateMiddleWare]);
-  runApp( MyApp(store: _store));
+  Store<AppState> _store = Store<AppState>(reducers,
+      initialState: AppState.initial(), middleware: [appStateMiddleWare]);
+  runApp(MyApp(store: _store));
 }
 
 class MyApp extends StatelessWidget {
-  Store store;
+  Store<AppState> store;
   MyApp({Key? key, required this.store}) : super(key: key);
 
   @override
